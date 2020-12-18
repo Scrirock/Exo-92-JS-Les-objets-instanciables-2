@@ -24,17 +24,18 @@ let tableauDePersonne = [
 ]
 
 let Classe = {
-    personne1: tableauDePersonne[0].getPhrase(),
-    personne2: tableauDePersonne[1].getPhrase(),
-    personne3: tableauDePersonne[2].getPhrase(),
-    personne4: tableauDePersonne[3].getPhrase(),
-    personne5: tableauDePersonne[4].getPhrase()
+    personnes: [
+        tableauDePersonne[0].getPhrase(),
+        tableauDePersonne[1].getPhrase(),
+        tableauDePersonne[2].getPhrase(),
+        tableauDePersonne[3].getPhrase(),
+        tableauDePersonne[4].getPhrase(),
+    ]
 }
 
 let div = document.createElement("div");
 document.body.append(div)
-div.innerHTML += Classe.personne1 + "<br>"
-div.innerHTML += Classe.personne2 + "<br>"
-div.innerHTML += Classe.personne3 + "<br>"
-div.innerHTML += Classe.personne4 + "<br>"
-div.innerHTML += Classe.personne5
+
+for (let i = 0; i<tableauDePersonne.length; i++){
+    div.innerHTML += Classe.personnes[i] + "<br>";
+}
